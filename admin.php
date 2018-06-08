@@ -1,7 +1,7 @@
 <?php
   $admin=false;
 
-  if(isset($_COOKIE['admin']) && $_COOKIE['admin']=='coc'){
+  if(isset($_COOKIE['admin']) && $_COOKIE['admin']=='bumbumtamtam'){
     $admin=true;
 
     ?>
