@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:300,400,700');
+
+body{
+  overflow-y:scroll;
+  font-size:13px;
+  font-family:'Roboto', verdana;
+  color: #5C5C5C;
+}
+
+table {
+  border-collapse:collapse;
+}
+
+td,th {
+  padding:0.3em 0.5em;
+}
+
+th {
+  background:linear-gradient(#fafafa,#f0f0f0);
+}
+
+[onclick]{
+  cursor:pointer;
+}
+
+hr{
+  border:none;
+  border-top:1px solid #ccc;
+}
