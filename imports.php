@@ -6,6 +6,7 @@
 
 <?php
 /**Connexió a la base de dades**/
-$mysql=mysqli_connect("127.0.0.1","root","","santjoan") or die(mysqli_error($mysql));
+error_reporting(E_ALL);
+$mysql=mysqli_connect("127.0.0.1","root","Bol729sh","santjoan") or die(mysqli_error($mysql));
 ?>
 
