@@ -1,8 +1,17 @@
 <?php
-  $sql="SELECT * FROM assistents ORDER BY nom";
+  $sql="SELECT * FROM assistents ORDER BY id";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
+
+  $han_pagat=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
 ?>
-<h3>Llista assistents (<?php echo mysqli_num_rows($res)?>)</h3>
+<h3>
+  Llista boreal &mdash;
+  Han pagat:
+  <?php echo $han_pagat?>
+  de
+  <?php echo mysqli_num_rows($res)?>
+  assistents totals
+</h3>
 
 <table border=1>
   <tr>

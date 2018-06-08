@@ -6,9 +6,7 @@
     </span>
 
     <span>
-      🔥
-      🔥
-      <span onclick="window.location='login.php'"> 🔥 </span>
+      🔥 🔥 <span onclick="window.location='login.php'"> 🔥 </span> 🔥
     </span>
   </div>
 
