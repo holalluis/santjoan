@@ -29,14 +29,15 @@
       $mail  = $row['mail'];
       $pagat = $row['pagat'];
 
-      //colors casella "pagat"
+      //casella "pagat"
       $pagat_style = $pagat ? "'background:#af0;'":"'background:red;color:white'";
+      $pagat_text  = $pagat ? "Sí":"No";
 
       //dibuixa fila assistent
       echo "<tr assistent=$id>
         <td>$nom
-        <td><address><a href=mailto:$mail>$mail</a></address>
-        <td style=$pagat_style >".($pagat?"Sí":"No")."
+        <td class=mail><a href=mailto:$mail>$mail</a>
+        <td style=$pagat_style>$pagat_text
       ";
 
       //admin editar taula asssistents
@@ -51,7 +52,7 @@
 </table><hr>
 
 <style>
-  #assistents address {
+  #assistents td.mail {
     font-size:smaller;
   }
 </style>
