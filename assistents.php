@@ -14,7 +14,8 @@
 </h3>
 
 <!--taula assistents-->
-<table border=1><tr>
+<table id=assistents border=1>
+  <tr>
     <th>Nom
     <th>Mail
     <th>Pagat
@@ -34,7 +35,7 @@
       //dibuixa fila assistent
       echo "<tr assistent=$id>
         <td>$nom
-        <td><a href=mailto:$mail>$mail</a>
+        <td><address><a href=mailto:$mail>$mail</a></address>
         <td style=$pagat_style >".($pagat?"Sí":"No")."
       ";
 
@@ -48,3 +49,9 @@
     }
   ?>
 </table><hr>
+
+<style>
+  #assistents address {
+    font-size:smaller;
+  }
+</style>
