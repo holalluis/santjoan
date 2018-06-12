@@ -17,7 +17,7 @@
     <th>Pagat
     <th>Comissió
     <th>Ajuda a muntar
-    <?php if($admin)echo "<th colspan=4>Admin</th>"?>
+    <?php if($admin)echo "<th>Esborra</th>"?>
   </tr><!--end header start content-->
   <?php
     while($row=mysqli_fetch_assoc($res)){
@@ -54,7 +54,7 @@
       //admin esborra asssistent
       if($admin){
         echo "
-          <td><button onclick=Admin.delete('assistents',$id)>Esborrar</button>
+          <td><button onclick=Admin.delete('assistents',$id)>Esborra</button>
         ";
       }
     }

@@ -23,6 +23,7 @@
           },
 
           delete:function(taula,id){
+            if(!confirm("Continuar?")){return;}
             console.log('delete',taula,id);
             var xhr=new XMLHttpRequest();
             xhr.open('POST',"delete.php",true);

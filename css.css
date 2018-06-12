@@ -23,6 +23,7 @@ td,th {
 
 th {
   background:linear-gradient(#fafafa,#f0f0f0);
+  font-weight:normal;
 }
 
 [onclick]{
