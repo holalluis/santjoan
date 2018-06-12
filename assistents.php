@@ -19,7 +19,7 @@
     <th>Nom
     <th>Mail
     <th>Pagat
-    <th>Ajuda a muntar/desmuntar
+    <th>Ajuda a<br>muntar/desmuntar
     <?php if($admin)echo "<th colspan=3>Admin</th>"?>
   </tr><!--end header start content-->
   <?php
