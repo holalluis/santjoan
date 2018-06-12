@@ -99,4 +99,7 @@
     text-align:center;
     color:white;
   }
+  #assistents tr:hover td {
+    text-decoration:underline;
+  }
 </style>
