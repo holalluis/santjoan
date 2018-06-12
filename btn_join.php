@@ -4,6 +4,9 @@
   onclick="window.location='join.php'">
   Apunta'm!
 </button>
+<span>
+  Data límit: 17 de juny
+</span>
 <hr>
 <style>
   #btn_join {
