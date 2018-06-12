@@ -52,13 +52,14 @@
       $desmu_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'desmuntar',".($desmu?0:1).")>canvi</button>":"";
 
       //dibuixa fila assistent
-      echo "<tr assistent=$id>
-        <td>$nom
-        $mail_td
-        <td class=bool style=$pagat_style>$pagat_text $pagat_admin
-        <td class=bool style=$comis_style>$comis_text $comis_admin
-        <td class=bool style=$ajuda_style>$ajuda_text $ajuda_admin
-        <td class=bool style=$desmu_style>$desmu_text $desmu_admin
+      echo "
+        <tr assistent=$id>
+          <td>$nom
+          $mail_td
+          <td class=bool style=$pagat_style>$pagat_text $pagat_admin
+          <td class=bool style=$comis_style>$comis_text $comis_admin
+          <td class=bool style=$ajuda_style>$ajuda_text $ajuda_admin
+          <td class=bool style=$desmu_style>$desmu_text $desmu_admin
       ";
 
       //admin esborra asssistent
@@ -84,10 +85,10 @@
       $desmunten=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE desmuntar is TRUE')));
 
       echo "
-        <td>$pagats
-        <td>$comiss
-        <td>$ajuden
-        <td>$desmunten
+        <th>$pagats
+        <th>$comiss
+        <th>$ajuden
+        <th>$desmunten
       ";
     ?>
   </tbody>
@@ -97,8 +98,5 @@
   #assistents td.bool {
     text-align:center;
     color:white;
-  }
-  #assistents #resum td{
-    text-align:center;
   }
 </style>
