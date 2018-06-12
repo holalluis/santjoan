@@ -32,34 +32,34 @@
       //casella "pagat"
       $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
+      $pagat_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>canvi</button>":"";
+
       //casella "comis"
       $comis_style = $comis ? "'background:#5cb85c;'":"'background:red;'";
       $comis_text  = $comis ? "Sí":"No";
-
+      $comis_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'comis',".($comis?0:1).")>canvi</button>":"";
       //casella "ajuda"
       $ajuda_style = $ajuda ? "'background:#5cb85c;'":"'background:red;'";
       $ajuda_text  = $ajuda ? "Sí":"No";
+      $ajuda_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'ajuda',".($ajuda?0:1).")>canvi</button>":"";
 
       //dibuixa fila assistent
       echo "<tr assistent=$id>
         <td>$nom
-        <td class=bool style=$pagat_style>$pagat_text
-        <td class=bool style=$comis_style>$comis_text
-        <td class=bool style=$ajuda_style>$ajuda_text
+        <td class=bool style=$pagat_style>$pagat_text $pagat_admin
+        <td class=bool style=$comis_style>$comis_text $comis_admin
+        <td class=bool style=$ajuda_style>$ajuda_text $ajuda_admin
       ";
 
-      //admin editar taula asssistents
+      //admin esborra asssistent
       if($admin){
         echo "
-          <td><button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>Pagat</button>
-          <td><button onclick=Admin.update('assistents',$id,'comis',".($comis?0:1).")>Comissió</button>
-          <td><button onclick=Admin.update('assistents',$id,'ajuda',".($ajuda?0:1).")>Ajuda</button>
           <td><button onclick=Admin.delete('assistents',$id)>Esborrar</button>
         ";
       }
     }
   ?>
-  
+
   <!--resum-->
   <tbody id=resum>
     <tr><th>Total
