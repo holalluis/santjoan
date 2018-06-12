@@ -8,16 +8,10 @@
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
-  Llista boreal
-  &mdash;
-  Han pagat
-  <?php echo $han_pagat ?>
-  &mdash;
-  Ajuden
-  <?php echo $ajuden ?>
-  &mdash;
-  Assistents totals:
-  <?php echo mysqli_num_rows($res)?>
+  Llista boreal &mdash;
+  Han pagat: <?php echo $han_pagat ?> &mdash;
+  Ajuden: <?php echo $ajuden ?> &mdash;
+  Assistents totals: <?php echo mysqli_num_rows($res)?>
 </h3>
 
 <!--taula assistents-->
