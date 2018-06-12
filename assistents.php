@@ -6,7 +6,7 @@
 ?>
 <h3>
   Llista boreal &mdash;
-  Assistents totals: <?php echo mysqli_num_rows($res)?>
+  Persones apuntades: <?php echo mysqli_num_rows($res)?>
 </h3>
 
 <!--taula assistents-->
