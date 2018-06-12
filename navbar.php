@@ -22,13 +22,12 @@
     <?php
     }
   ?>
-</h2>
+</h2><hr>
 
 <style>
   #navbar {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    border-bottom:1px solid #ccc;
   }
 </style>
