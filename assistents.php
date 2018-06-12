@@ -19,7 +19,8 @@
     <th>Nom
     <th>Mail
     <th>Pagat
-    <?php if($admin)echo "<th colspan=2>Admin</th>"?>
+    <th>Ajuda a muntar (18:00h)
+    <?php if($admin)echo "<th colspan=3>Admin</th>"?>
   </tr><!--end header start content-->
   <?php
     while($row=mysqli_fetch_assoc($res)){
@@ -28,22 +29,29 @@
       $nom   = $row['nom'];
       $mail  = $row['mail'];
       $pagat = $row['pagat'];
+      $ajuda = $row['ajuda'];
 
       //casella "pagat"
       $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
+
+      //casella "ajuda"
+      $ajuda_style = $ajuda ? "'background:#5cb85c;'":"'background:red;'";
+      $ajuda_text  = $ajuda ? "Sí":"No";
 
       //dibuixa fila assistent
       echo "<tr assistent=$id>
         <td>$nom
         <td class=mail><a href=mailto:$mail>$mail</a>
         <td class=pagat style=$pagat_style>$pagat_text
+        <td class=pagat style=$ajuda_style>$ajuda_text
       ";
 
       //admin editar taula asssistents
       if($admin){
         echo "
           <td><button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>Pagat</button>
+          <td><button onclick=Admin.update('assistents',$id,'ajuda',".($ajuda?0:1).")>Ajuda</button>
           <td><button onclick=Admin.delete('assistents',$id)>Esborrar</button>
         ";
       }
