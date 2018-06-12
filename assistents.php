@@ -18,9 +18,9 @@
 <table id=assistents border=1>
   <tr>
     <th>Nom
-    <th>Mail
+    <!--<th>Mail-->
     <th>Pagat
-    <th>Ajuda a<br>muntar/desmuntar
+    <th>Ajuda a muntar
     <?php if($admin)echo "<th colspan=3>Admin</th>"?>
   </tr><!--end header start content-->
   <?php
@@ -41,9 +41,8 @@
       $ajuda_text  = $ajuda ? "Sí":"No";
 
       //dibuixa fila assistent
-      echo "<tr assistent=$id>
+      echo "<tr assistent=$id title='$mail'>
         <td>$nom
-        <td class=mail><a href=mailto:$mail>$mail</a>
         <td class=pagat style=$pagat_style>$pagat_text
         <td class=pagat style=$ajuda_style>$ajuda_text
       ";
