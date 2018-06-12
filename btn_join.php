@@ -1,13 +1,32 @@
+<div class=flex>
+  <button
+    id=btn_join
+    onclick="window.location='join.php'">
+    Apunta'm!
+  </button>
 
-<button
-  id=btn_join
-  onclick="window.location='join.php'">
-  Apunta'm!
-</button>
-<span>
-  Data límit: 17 de juny
-</span>
-<hr>
+  <div id=data_limit>
+    &#9202;
+    Data límit: diumenge 17 de juny
+    &#9202;
+    <style>
+      /*animacio*/
+      @keyframes blink {
+        from {
+          opacity:0.2;
+        } to {
+          opacity:1;
+        }
+      }
+
+      #data_limit {
+        padding:0.6em;
+        animation:blink 1s infinite alternate;
+      }
+    </style>
+  </div>
+</div><hr>
+
 <style>
   #btn_join {
     display:block;

@@ -1,11 +1,14 @@
 <h2 id=navbar>
   <!--esquerra-->
   <div>
+    <span>
+      🔥 🔥
+    </span>
     <span onclick=window.location='index.php'>
       Sant Joan Boreal 2018
     </span>
     <span>
-      🔥 🔥 <span onclick="window.location='login.php'"> 🔥 </span> 🔥
+      <span onclick="window.location='login.php'"> 🔥 </span> 🔥
     </span>
   </div>
   <!--dreta-->
@@ -26,5 +29,6 @@
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
+    letter-spacing:2px;
   }
 </style>
