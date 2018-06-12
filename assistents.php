@@ -3,7 +3,7 @@
   $han_pagat=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
 
   //query all assistents per ordre d'apuntats
-  $sql="SELECT * FROM assistents ORDER BY id";
+  $sql="SELECT * FROM assistents ORDER BY nom";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
