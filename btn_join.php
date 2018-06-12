@@ -20,7 +20,7 @@
       }
 
       #data_limit {
-        padding:0.6em;
+        padding:0.4em 0;
         animation:blink 1s infinite alternate;
       }
     </style>
@@ -45,6 +45,7 @@
     user-select:none;
     vertical-align:middle;
     white-space:nowrap;
+    margin-right:5px;
   }
   #btn_join:hover {
     background-color: #449d44;
