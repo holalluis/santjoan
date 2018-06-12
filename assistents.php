@@ -8,7 +8,7 @@
 ?>
 <h3>
   Llista boreal &mdash;
-  Han pagat:
+  Han pagat
   <?php echo $han_pagat ?> de <?php echo mysqli_num_rows($res)?>
   assistents totals
 </h3>
@@ -30,14 +30,14 @@
       $pagat = $row['pagat'];
 
       //casella "pagat"
-      $pagat_style = $pagat ? "'background:#af0;'":"'background:red;color:white'";
+      $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
 
       //dibuixa fila assistent
       echo "<tr assistent=$id>
         <td>$nom
         <td class=mail><a href=mailto:$mail>$mail</a>
-        <td style=$pagat_style>$pagat_text
+        <td class=pagat style=$pagat_style>$pagat_text
       ";
 
       //admin editar taula asssistents
@@ -54,5 +54,9 @@
 <style>
   #assistents td.mail {
     font-size:smaller;
+  }
+  #assistents td.pagat {
+    text-align:center;
+    color:white;
   }
 </style>
