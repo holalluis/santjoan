@@ -1,16 +1,23 @@
 <?php
   //calcula nombre de pesones que han pagat
   $han_pagat=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
+  $ajuden=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE ajuda is TRUE')));
 
   //query all assistents per ordre d'apuntats
   $sql="SELECT * FROM assistents ORDER BY nom";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
-  Llista boreal &mdash;
+  Llista boreal
+  &mdash;
   Han pagat
-  <?php echo $han_pagat ?> de <?php echo mysqli_num_rows($res)?>
-  assistents totals
+  <?php echo $han_pagat ?>
+  &mdash;
+  Ajuden
+  <?php echo $ajuden ?>
+  &mdash;
+  Assistents totals:
+  <?php echo mysqli_num_rows($res)?>
 </h3>
 
 <!--taula assistents-->
