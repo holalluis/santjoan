@@ -29,6 +29,5 @@
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    letter-spacing:2px;
   }
 </style>
