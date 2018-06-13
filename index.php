@@ -21,9 +21,14 @@
   </p>
 
   <p>
-    Moltes gràcies per cooperar perquè sigui una gran festa!<br>
-    <b>
-    Que comenci l'estiu!
+    Moltes gràcies per cooperar perquè sigui una gran festa.<br>
+  </p>
+  <p>
+    <b style=letter-spacing:3px>
+      Que comenci l'estiu!
     </b>
   </p>
+  <img src=img/alba.jpg style="max-width:99%">
 </div>
+
+
