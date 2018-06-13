@@ -10,6 +10,8 @@
   <p>
     Recordeu que aquesta festa la muntem perquè ens ve de gust,
     que ho fem per celebrar el foc, el solstici i la vida.
+  </p>
+  <p>
     <b>Sentiu-vos partíceps i amfitrions de la festa, que és vostra</b>.
     No sou al Sònar ni a L'Apol·lo, ningú es lucra amb la vostra celebració i això no té preu.
     O un de molt petit: <b>us demanem que sigueu actius en cooperar perquè tot surti bé</b>
@@ -19,7 +21,6 @@
     I quan la ressaca ens comenci a despertar haurem de fer una altra brigada
     per acabar de deixar la platja neta perquè hi puguem tornar un any més!
   </p>
-
   <p>
     Moltes gràcies per cooperar perquè sigui una gran festa.<br>
   </p>
@@ -30,5 +31,3 @@
   </p>
   <img src=img/alba.jpg style="max-width:100%">
 </div>
-
-
