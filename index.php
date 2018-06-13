@@ -11,7 +11,7 @@
     Recordeu que aquesta festa la muntem perquè ens ve de gust,
     que ho fem per celebrar el foc, el solstici i la vida.
     <b>Sentiu-vos partíceps i amfitrions de la festa, que és vostra</b>.
-    No sou al Sónar ni a L'Apol·lo, ningú es lucra amb la vostra celebració i això no té preu.
+    No sou al Sònar ni a L'Apol·lo, ningú es lucra amb la vostra celebració i això no té preu.
     O un de molt petit: <b>us demanem que sigueu actius en cooperar perquè tot surti bé</b>
     (des del muntar, durant el transcurs de la festa i sobretot al desmuntar).
     Un cop s'acabi la música s'haurà de portar tot el material electrònic a les furgonetes,
