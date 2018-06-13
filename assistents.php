@@ -54,7 +54,7 @@
       //dibuixa fila assistent
       echo "
         <tr assistent=$id>
-          <td><small>$nom</small>
+          <td title='$mail'><small>$nom</small>
           $mail_td
           <td class=bool style=$pagat_style>$pagat_text $pagat_admin
           <td class=bool style=$comis_style>$comis_text $comis_admin
