@@ -6,9 +6,8 @@
   </button>
 
   <div id=data_limit>
-    &#9202;
+    &#9201;
     Data límit per apuntar-se: diumenge 17 de juny
-    &#9202;
     <style>
       /*animacio*/
       @keyframes blink {
