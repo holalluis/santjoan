@@ -95,6 +95,9 @@
 </table><hr>
 
 <style>
+  #assistents th {
+    font-size:smaller;
+  }
   #assistents td.bool {
     text-align:center;
     color:white;
