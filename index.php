@@ -28,7 +28,7 @@
       Que comenci l'estiu!
     </b>
   </p>
-  <img src=img/alba.jpg style="max-width:99%">
+  <img src=img/alba.jpg style="max-width:100%">
 </div>
 
 
