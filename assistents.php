@@ -107,8 +107,8 @@
         <th>$comiss
         <th>$ajuden
         <th>$desmunten
-        <th>
       ";
+      if($admin)echo "<th>"; //columna admin final
     ?>
   </tbody>
 </table><hr>
