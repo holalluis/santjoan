@@ -1,7 +1,8 @@
 <?php
 
   //query all assistents per ordre d'apuntats
-  $sql="SELECT * FROM assistents ORDER BY nom";
+  $order_by= isset($_GET['ordre']) ? "ORDER BY id" : "ORDER BY nom";
+  $sql="SELECT * FROM assistents $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
@@ -13,6 +14,14 @@
 <table id=assistents border=1>
   <tr>
     <th>Nom
+      <?php
+        //botons ordenar per nom o id
+        if($admin){ ?>
+          <button onclick=window.location="index.php">&darr;A-Z</button>
+          <button onclick=window.location="index.php?ordre">&darr;123</button>
+          <?php
+        }
+      ?>
     <?php if($admin) echo "<th>Mail</th>"?>
     <th>Pagat
     <th>Comissió
