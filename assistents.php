@@ -13,17 +13,16 @@
 <!--taula assistents-->
 <table id=assistents border=1>
   <tr>
-    <th>Nom
+    <th id=columna_nom>Nom
       <?php
         //botons admin: ordenar per nom o id
-        if($admin && $order_by=='id'){
-          //ordena per nom
-          ?><button title="per ordre alfabètic"  onclick=window.location="index.php">&darr;ABC</button><?php
-        }elseif($admin && $order_by=='nom'){
-          //ordena per id
-          ?><button title="per ordre d'arribada" onclick=window.location="index.php?ordre">&darr;123</button><?php
+        if($order_by=='id'){
+          ?><button title="ordre d'arribada" onclick=window.location="index.php">&darr;123</button><?php
+        }elseif($order_by=='nom'){
+          ?><button title="ordre alfabètic"  onclick=window.location="index.php?ordre">&darr;ABC</button><?php
         }
       ?>
+      <style>#columna_nom button {font-size:smaller }</style>
     <?php if($admin) echo "<th>Mail</th>"?>
     <th>Pagat
     <th>Comissió
@@ -108,6 +107,7 @@
         <th>$comiss
         <th>$ajuden
         <th>$desmunten
+        <th>
       ";
     ?>
   </tbody>
