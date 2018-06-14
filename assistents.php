@@ -1,8 +1,8 @@
 <?php
 
   //query all assistents per ordre d'apuntats
-  $order_by= isset($_GET['ordre']) ? "ORDER BY id" : "ORDER BY nom";
-  $sql="SELECT * FROM assistents $order_by";
+  $order_by= isset($_GET['ordre']) ? "id" : "nom";
+  $sql="SELECT * FROM assistents ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
@@ -15,11 +15,13 @@
   <tr>
     <th>Nom
       <?php
-        //botons ordenar per nom o id
-        if($admin){ ?>
-          <button onclick=window.location="index.php">&darr;A-Z</button>
-          <button onclick=window.location="index.php?ordre">&darr;123</button>
-          <?php
+        //botons admin: ordenar per nom o id
+        if($admin && $order_by=='id'){
+          //ordena per nom
+          ?><button title="per ordre alfabètic"  onclick=window.location="index.php">&darr;ABC</button><?php
+        }elseif($admin && $order_by=='nom'){
+          //ordena per id
+          ?><button title="per ordre d'arribada" onclick=window.location="index.php?ordre">&darr;123</button><?php
         }
       ?>
     <?php if($admin) echo "<th>Mail</th>"?>
