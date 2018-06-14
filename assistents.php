@@ -37,29 +37,36 @@
       //casella "pagat"
       $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
-      $pagat_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>canvi</button>":"";
+      $pagat_admin = "<button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>$pagat_text</button>";
+      $pagat_html  = $admin ? $pagat_admin : $pagat_text;
+
       //casella "comis"
       $comis_style = $comis ? "'background:#5cb85c;'":"'background:red;'";
       $comis_text  = $comis ? "Sí":"No";
-      $comis_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'comis',".($comis?0:1).")>canvi</button>":"";
+      $comis_admin = "<button onclick=Admin.update('assistents',$id,'comis',".($comis?0:1).")>$comis_text</button>";
+      $comis_html  = $admin ? $comis_admin : $comis_text;
+
       //casella "ajuda a muntar"
       $ajuda_style = $ajuda ? "'background:#5cb85c;'":"'background:red;'";
       $ajuda_text  = $ajuda ? "Sí":"No";
-      $ajuda_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'ajuda',".($ajuda?0:1).")>canvi</button>":"";
+      $ajuda_admin = "<button onclick=Admin.update('assistents',$id,'ajuda',".($ajuda?0:1).")>$ajuda_text</button>";
+      $ajuda_html  = $admin ? $ajuda_admin : $ajuda_text;
+
       //casella "ajuda a desmuntar"
       $desmu_style = $desmu ? "'background:#5cb85c;'":"'background:red;'";
       $desmu_text  = $desmu ? "Sí":"No";
-      $desmu_admin = $admin ? "<button onclick=Admin.update('assistents',$id,'desmuntar',".($desmu?0:1).")>canvi</button>":"";
+      $desmu_admin = "<button onclick=Admin.update('assistents',$id,'desmuntar',".($desmu?0:1).")>$desmu_text</button>";
+      $desmu_html  = $admin ? $desmu_admin : $desmu_text;
 
       //dibuixa fila assistent
       echo "
         <tr assistent=$id>
           <td><small>$nom</small>
           $mail_td
-          <td class=bool style=$pagat_style>$pagat_text $pagat_admin
-          <td class=bool style=$comis_style>$comis_text $comis_admin
-          <td class=bool style=$ajuda_style>$ajuda_text $ajuda_admin
-          <td class=bool style=$desmu_style>$desmu_text $desmu_admin
+          <td class=bool style=$pagat_style>$pagat_html
+          <td class=bool style=$comis_style>$comis_html
+          <td class=bool style=$ajuda_style>$ajuda_html
+          <td class=bool style=$desmu_style>$desmu_html
       ";
 
       //admin esborra asssistent
@@ -77,6 +84,7 @@
     <?php
       //calcula nombre de pesones que han pagat
       $pagats=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
+      $euros=$pagats*25;
       //calcula nombre de pesones que formen part d'alguna comissió
       $comiss=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE comis is TRUE')));
       //calcula nombre de pesones que ajuden a muntar
@@ -85,7 +93,7 @@
       $desmunten=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE desmuntar is TRUE')));
 
       echo "
-        <th>$pagats
+        <th>$pagats ($euros eur)
         <th>$comiss
         <th>$ajuden
         <th>$desmunten
