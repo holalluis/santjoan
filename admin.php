@@ -9,6 +9,7 @@
         //funcions admin
         var Admin={
           update:function(taula,id,camp,nouValor){
+            if(!confirm("Update id "+id+", camp '"+camp+"'. Continuar?")){return;}
             console.log('update',taula,id,camp,nouValor);
             var xhr=new XMLHttpRequest();
             xhr.open('POST',"update.php",true);
@@ -23,7 +24,7 @@
           },
 
           delete:function(taula,id){
-            if(!confirm("Continuar?")){return;}
+            if(!confirm("Esborrar id "+id+". Continuar?")){return;}
             console.log('delete',taula,id);
             var xhr=new XMLHttpRequest();
             xhr.open('POST',"delete.php",true);
