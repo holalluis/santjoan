@@ -74,7 +74,7 @@
       $mail_td = $admin ? "<td><small>$mail</small>":"";
 
       //casella "pagat"
-      $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
+      $pagat_style = $pagat ? ($pagat=="1" ? "'background:#5cb85c;'" : "'background:orange'" ) : "'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
       $pagat_admin = "<button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>$pagat_text</button>";
       $pagat_html  = $admin ? $pagat_admin : $pagat_text;
