@@ -5,13 +5,15 @@
 <?php include'navbar.php'?>
 
 <h3>Nou assistent</h3>
-<p>
-  <div>
+<div>
+  <p>
     Després d'apuntar-te ingressa
     <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>.
-  </div>
-  <div><b>Molt important</b>: posa <b>nom i cognoms</b> al concepte, així podrem verificar qui ha pagat.</div>
-</p>
+  </p>
+  <p>
+    <div><b>Molt important</b>: posa <b>nom i cognoms</b> al concepte, així podrem verificar qui ha pagat.</div>
+  </p>
+</div>
 
 <!--formulari-->
 <form method=post>
