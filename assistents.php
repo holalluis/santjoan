@@ -1,13 +1,14 @@
 <?php
   //filtres
-  $order_by = isset($_GET['ordre'])    ? "id":"nom";
-  $impagats = isset($_GET['impagats']) ? "pagat=0 AND":"";
-  $pagats   = isset($_GET['pagats'])   ? "pagat=1 AND":"";
+  $order_by  = isset($_GET['ordre'])     ? "id":"nom";
+  $impagats  = isset($_GET['impagats'])  ? "pagat=0 AND":"";
+  $pagats    = isset($_GET['pagats'])    ? "pagat=1 AND":"";
+  $en_proces = isset($_GET['en_proces']) ? "pagat=2 AND":"";
 
   //query all assistents per ordre d'apuntats
   //millorar aquesta part
   $sql="SELECT * FROM assistents 
-    WHERE $pagats $impagats 1
+    WHERE $pagats $impagats $en_proces 1
     ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
@@ -40,13 +41,17 @@
     <th>Pagat
       <?php
         //filtre pagats impagats
-        if($impagats=='' && $pagats==''){
+        if($impagats=='' && $pagats=='' && $en_proces){
           ?>
             <button onclick=window.location='index.php?impagats'>tots</button>
           <?php
         }else if($impagats!=''){
           ?>
-            <button onclick=window.location='index.php?pagats'>impagats</button>
+            <button onclick=window.location='index.php?en_proces'>impagats</button>
+          <?php
+        }else if($en_proces!=''){
+          ?>
+            <button onclick=window.location='index.php?pagats'>en procés</button>
           <?php
         }else if($pagats!=''){
           ?>
