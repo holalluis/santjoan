@@ -29,6 +29,5 @@
       Que comenci l'estiu!
     </b>
   </p>
-  <p><a href="img/cartell.pdf">Descarrega't el cartell aquí (pdf)</a></p>
-  <img src=img/alba.jpg style="max-width:100%">
+  <img src=img/cartell.png style="display:block;margin:auto;max-width:100%;box-shadow: 0 0 10px #000000">
 </div>
