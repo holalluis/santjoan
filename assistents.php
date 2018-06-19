@@ -1,8 +1,12 @@
 <?php
 
   //query all assistents per ordre d'apuntats
-  $order_by= isset($_GET['ordre']) ? "id" : "nom";
-  $sql="SELECT * FROM assistents ORDER BY $order_by";
+  $order_by = isset($_GET['ordre']) ? "id" : "nom";
+  $impagats = isset($_GET['impagats']) ? "WHERE pagat=0" : "";
+
+  $sql="SELECT * FROM assistents 
+      $impagats
+      ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
@@ -25,6 +29,18 @@
       <style>#columna_nom button {font-size:smaller }</style>
     <?php if($admin) echo "<th>Mail</th>"?>
     <th>Pagat
+      <?php
+        //botons admin: ordenar per nom o id
+        if($impagats==''){
+          ?>
+            <button onclick=window.location='index.php?impagats'>tots</button>
+          <?php
+        }else{
+          ?>
+            <button onclick=window.location='index.php'>impagats</button>
+          <?php
+        }
+      ?>
     <th>Comissió
     <th>Muntar
     <th>Desmuntar
