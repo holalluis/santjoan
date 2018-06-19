@@ -41,7 +41,7 @@
     <th>Pagat
       <?php
         //filtre pagats impagats
-        if($impagats=='' && $pagats=='' && $en_proces){
+        if($impagats=='' && $pagats=='' && $en_proces==''){
           ?>
             <button onclick=window.location='index.php?impagats'>tots</button>
           <?php
