@@ -71,7 +71,7 @@
       $desmu = $row['desmuntar'];
 
       //casella "mail"
-      $mail_td = $admin ? "<td><small>$mail</small>":"";
+      $mail_td = $admin ? "<td><small title='id $id'>$mail</small>":"";
 
       //casella "pagat"
       $pagat_style = $pagat ? ($pagat=="1" ? "'background:#5cb85c;'" : "'background:orange'" ) : "'background:red;'";
