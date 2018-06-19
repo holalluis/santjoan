@@ -2,14 +2,13 @@
 
   //filtres
   $order_by = isset($_GET['ordre'])    ? "id":"nom";
-  $impagats = isset($_GET['impagats']) ? "WHERE pagat=0":"";
-  $pagats   = isset($_GET['pagats'])   ? "WHERE pagat=1":"";
+  $impagats = isset($_GET['impagats']) ? "pagat=0 AND":"";
+  $pagats   = isset($_GET['pagats'])   ? "pagat=1 AND":"";
 
   //query all assistents per ordre d'apuntats
   $sql="SELECT * FROM assistents 
-      $pagats
-      $impagats
-      ORDER BY $order_by";
+    WHERE $pagats $impagats 1
+    ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
@@ -21,6 +20,8 @@
     echo $persones;
   ?>
 </h3>
+
+<code style=display:none;font-size:small><?php echo $sql?></code>
 
 <!--taula assistents-->
 <table id=assistents border=1>
@@ -70,7 +71,7 @@
       $desmu = $row['desmuntar'];
 
       //casella "mail"
-      $mail_td = $admin ? "<td><small><a href=mailto:$mail>$mail</a></small>":"";
+      $mail_td = $admin ? "<td><small>$mail</small>":"";
 
       //casella "pagat"
       $pagat_style = $pagat ? "'background:#5cb85c;'":"'background:red;'";
@@ -149,7 +150,7 @@
     text-align:center;
     color:white;
   }
-  #assistents tr:hover td {
+  #assistents tr:hover td:first-child {
     text-decoration:underline;
   }
 </style>
