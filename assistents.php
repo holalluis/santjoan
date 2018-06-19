@@ -16,12 +16,11 @@
   Llista boreal &mdash;
   Persones:
   <?php 
-    //nombre total de persones
+    //nombre total de persones (tenint en compte els filtres)
     $persones = mysqli_num_rows($res);
     echo $persones;
   ?>
 </h3>
-
 <code style=display:none;font-size:small><?php echo $sql?></code>
 
 <!--taula assistents-->
@@ -29,7 +28,7 @@
   <tr>
     <th id=columna_nom>Nom
       <?php
-        //botons admin: ordenar per nom o id
+        //botons ordenar persones per nom o id
         if($order_by=='id'){
           ?><button title="ordre d'arribada" onclick=window.location="index.php">&darr;123</button><?php
         }elseif($order_by=='nom'){
@@ -42,22 +41,11 @@
       <?php
         //filtre pagats impagats
         if($impagats=='' && $pagats=='' && $en_proces==''){
-          ?>
-            <button onclick=window.location='index.php?impagats'>tots</button>
-          <?php
-        }else if($impagats!=''){
-          ?>
-            <button onclick=window.location='index.php?en_proces'>impagats</button>
-          <?php
-        }else if($en_proces!=''){
-          ?>
-            <button onclick=window.location='index.php?pagats'>en procés</button>
-          <?php
-        }else if($pagats!=''){
-          ?>
-            <button onclick=window.location='index.php'>pagats</button>
-          <?php
-        }
+          ?><button onclick=window.location='index.php?impagats'>tots</button><?php
+        }else if($impagats!=''){  ?><button onclick=window.location='index.php?en_proces'>impagats </button><?php
+        }else if($en_proces!=''){ ?><button onclick=window.location='index.php?pagats'   >en procés</button><?php
+        //nous botons aqui sobre
+        }else if($pagats!=''){    ?><button onclick=window.location='index.php'          >pagats   </button><?php }
       ?>
     <th>Comissió
     <th>Muntar
@@ -81,7 +69,10 @@
       //casella "pagat"
       $pagat_style = $pagat ? ($pagat=="1" ? "'background:#5cb85c;'" : "'background:orange'" ) : "'background:red;'";
       $pagat_text  = $pagat ? "Sí":"No";
-      $pagat_admin = "<button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>$pagat_text</button>";
+      $pagat_admin = "
+        <button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>$pagat_text</button>
+        <button onclick=Admin.update('assistents',$id,'pagat',2)>en procés</button>
+      ";
       $pagat_html  = $admin ? $pagat_admin : $pagat_text;
 
       //casella "comis"
