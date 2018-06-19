@@ -1,17 +1,25 @@
 <?php
 
-  //query all assistents per ordre d'apuntats
-  $order_by = isset($_GET['ordre']) ? "id" : "nom";
-  $impagats = isset($_GET['impagats']) ? "WHERE pagat=0" : "";
+  //filtres
+  $order_by = isset($_GET['ordre'])    ? "id":"nom";
+  $impagats = isset($_GET['impagats']) ? "WHERE pagat=0":"";
+  $pagats   = isset($_GET['pagats'])   ? "WHERE pagat=1":"";
 
+  //query all assistents per ordre d'apuntats
   $sql="SELECT * FROM assistents 
+      $pagats
       $impagats
       ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <h3>
   Llista boreal &mdash;
-  Persones apuntades: <?php echo mysqli_num_rows($res)?>
+  Persones apuntades:
+  <?php 
+    //nombre total de persones
+    $persones = current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents')));
+    echo $persones;
+  ?>
 </h3>
 
 <!--taula assistents-->
@@ -30,14 +38,18 @@
     <?php if($admin) echo "<th>Mail</th>"?>
     <th>Pagat
       <?php
-        //botons admin: ordenar per nom o id
-        if($impagats==''){
+        //filtre pagats impagats
+        if($impagats=='' && $pagats==''){
           ?>
             <button onclick=window.location='index.php?impagats'>tots</button>
           <?php
-        }else{
+        }else if($impagats!=''){
           ?>
-            <button onclick=window.location='index.php'>impagats</button>
+            <button onclick=window.location='index.php?pagats'>impagats</button>
+          <?php
+        }else if($pagats!=''){
+          ?>
+            <button onclick=window.location='index.php'>pagats</button>
           <?php
         }
       ?>
