@@ -10,15 +10,9 @@
     Data límit per <b>PAGAR</b>: dimecres 20 de juny!!!
     <style>
       /*animacio*/
-      @keyframes blink {
-        from {
-          opacity:0.2;
-        } to {
-          opacity:1;
-        }
-      }
-
+      @keyframes blink { from { opacity:0.2; } to { opacity:1; } }
       #data_limit {
+        color:red;
         padding:0.4em 0;
         animation:blink 1s infinite alternate;
       }

@@ -10,9 +10,8 @@
     Després d'apuntar-te ingressa
     <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>.
   </div>
-  <div>Posa <b>nom i cognoms</b> al concepte, així anirem verificant qui ha pagat.</div>
+  <div><b>Molt important</b>: posa <b>nom i cognoms</b> al concepte, així podrem verificar qui ha pagat.</div>
 </p>
-<p>⚠ Paga abans del <b>diumenge 17 de juny</b> o no seràs comptat!</p><hr>
 
 <!--formulari-->
 <form method=post>
