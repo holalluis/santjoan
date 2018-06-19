@@ -14,10 +14,10 @@
 ?>
 <h3>
   Llista boreal &mdash;
-  Persones apuntades:
+  Persones:
   <?php 
     //nombre total de persones
-    $persones = current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents')));
+    $persones = mysqli_num_rows($res);
     echo $persones;
   ?>
 </h3>
