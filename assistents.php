@@ -98,7 +98,7 @@
         <tr assistent=$id>
           <td><small>$nom</small>
           $mail_td
-          <td class=bool style=$pagat_style>$pagat_html
+          <td class=bool style=$pagat_style title='".($pagat==2?"Pagament en procés":"")."'>$pagat_html
           <td class=bool style=$comis_style>$comis_html
           <td class=bool style=$ajuda_style>$ajuda_html
           <td class=bool style=$desmu_style>$desmu_html
@@ -118,7 +118,7 @@
     <tr><th colspan="<?php if($admin)echo'2'?>">Total
     <?php
       //calcula nombre de pesones que han pagat
-      $pagats=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
+      $pagats=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat=1')));
       $euros=$pagats*25;
       //calcula nombre de pesones que formen part d'alguna comissió
       $comiss=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE comis is TRUE')));
