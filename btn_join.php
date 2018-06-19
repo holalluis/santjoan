@@ -7,7 +7,7 @@
 
   <div id=data_limit>
     &#9201;
-    Data límit per <b>PAGAR</b>: dimarts 19 de juny! Ja vas tard!
+    Data límit per <b>PAGAR</b>: dimarts 19 de juny! Espavila que vas tard!
     <style>
       /*animacio*/
       @keyframes blink { from { opacity:0.2; } to { opacity:1; } }
