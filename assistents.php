@@ -1,11 +1,11 @@
 <?php
-
   //filtres
   $order_by = isset($_GET['ordre'])    ? "id":"nom";
   $impagats = isset($_GET['impagats']) ? "pagat=0 AND":"";
   $pagats   = isset($_GET['pagats'])   ? "pagat=1 AND":"";
 
   //query all assistents per ordre d'apuntats
+  //millorar aquesta part
   $sql="SELECT * FROM assistents 
     WHERE $pagats $impagats 1
     ORDER BY $order_by";

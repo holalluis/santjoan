@@ -3,7 +3,6 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head><body>
 <?php include'navbar.php'?>
-
 <h3>Nou assistent</h3>
 <div>
   <p>
@@ -11,7 +10,7 @@
     <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>.
   </p>
   <p>
-    <div><b>Molt important</b>: posa <b>nom i cognoms</b> al concepte, així podrem verificar qui ha pagat.</div>
+    <div><b>Molt important</b>: posa el <b>nom i COGNOMS</b> al concepte, així podrem verificar qui ha pagat.</div>
   </p>
 </div>
 
