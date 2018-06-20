@@ -24,7 +24,7 @@
 <code style=display:none;font-size:small><?php echo $sql?></code>
 <div>
   <p>
-    <b>INSCRIPCIONS TANCADES</b>
+    <b style="border-radius:4px;background:red;padding:5px;color:white">INSCRIPCIONS TANCADES</b>
   </p>
   <p>
     Si encara no has pagat: <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>
