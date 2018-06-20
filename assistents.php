@@ -131,7 +131,7 @@
     <tr><th colspan="<?php if($admin)echo'2'?>">Total
     <?php
       //calcula nombre de pesones que han pagat
-      $pagats=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat=1')));
+      $pagats=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE pagat is TRUE')));
       $euros=$pagats*25;
       //calcula nombre de pesones que formen part d'alguna comissió
       $comiss=current(mysqli_fetch_assoc($mysql->query('SELECT COUNT(1) FROM assistents WHERE comis is TRUE')));
