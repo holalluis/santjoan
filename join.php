@@ -20,7 +20,7 @@
     <tr><th>Nom  <td><input name=name placeholder="Nom i cognoms" required max=50>
     <tr><th>Mail <td><input name=mail placeholder="Mail" required max=50>
     <tr><td colspan=2><div class="g-recaptcha" data-sitekey="6LcZE14UAAAAALFxofexh23_ZeKlierv9CMM0IaD"></div>
-    <tr><th><td><button>Apunta'm!</button>
+    <tr><th><td><button disabled>Apunta'm!</button>
   </table>
 </form><hr>
 
