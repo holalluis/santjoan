@@ -29,5 +29,5 @@
       Que comenci l'estiu!
     </b>
   </p>
-  <img src=img/cartell.png style="display:block;margin:auto;max-width:100%;box-shadow: 0 0 10px #000000">
+  <img src=img/cartell.jpg style="display:block;margin:auto;max-width:100%;box-shadow: 0 0 10px #000000">
 </div>
