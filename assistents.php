@@ -22,6 +22,11 @@
   ?>
 </h3>
 <code style=display:none;font-size:small><?php echo $sql?></code>
+<div>
+  <p>
+    Els que encara falteu per pagar: <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>.
+  </p>
+</div>
 
 <!--taula assistents-->
 <table id=assistents border=1>

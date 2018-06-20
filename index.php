@@ -27,5 +27,10 @@
   <p>
     <b style=letter-spacing:4px>Que comenci l'estiu!</b>
   </p>
-  <img src=img/cartell.jpg style="display:block;margin:auto;max-width:100%;box-shadow: 0 0 10px #000000">
+  <img src=img/cartell.jpg style="display:block;margin:auto;margin-bottom:10px;max-width:100%;box-shadow: 0 0 10px #000000">
+  <div style=font-size:smaller>
+    <div>* Cartell: Mireia Vilapuig</div>
+    <div>* Web: Lluís Bosch</div>
+  </div>
+
 </div>
