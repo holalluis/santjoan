@@ -12,7 +12,7 @@
     ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
-<h3>
+<h3 style=letter-spacing:1px>
   Llista boreal &mdash;
   Persones:
   <?php 
