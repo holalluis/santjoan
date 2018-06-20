@@ -25,9 +25,7 @@
     Moltes gràcies per cooperar perquè sigui una gran festa.<br>
   </p>
   <p>
-    <b style=letter-spacing:3px>
-      Que comenci l'estiu!
-    </b>
+    <b style=letter-spacing:4px>Que comenci l'estiu!</b>
   </p>
   <img src=img/cartell.jpg style="display:block;margin:auto;max-width:100%;box-shadow: 0 0 10px #000000">
 </div>

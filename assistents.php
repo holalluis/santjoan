@@ -71,7 +71,7 @@
       $pagat_text  = $pagat ? "Sí":"No";
       $pagat_admin = "
         <button onclick=Admin.update('assistents',$id,'pagat',".($pagat?0:1).")>$pagat_text</button>
-        <button onclick=Admin.update('assistents',$id,'pagat',2)>en procés</button>
+        <button onclick=Admin.update('assistents',$id,'pagat',".($pagat==2?1:2).")>en procés</button>
       ";
       $pagat_html  = $admin ? $pagat_admin : $pagat_text;
 
