@@ -35,7 +35,10 @@
           ?><button title="ordre alfabètic"  onclick=window.location="index.php?ordre">&darr;ABC</button><?php
         }
       ?>
-      <style>#columna_nom button {font-size:smaller }</style>
+      <style>
+        #columna_nom { width:200px; }
+        #columna_nom button {font-size:smaller; }
+      </style>
     <?php if($admin) echo "<th>Mail</th>"?>
     <th>Pagat
       <?php
