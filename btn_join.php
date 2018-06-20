@@ -1,6 +1,7 @@
 <div class=flex>
   <button
     id=btn_join
+    disabled
     onclick="window.location='join.php'">
     Apunta'm!
   </button>
