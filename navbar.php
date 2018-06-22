@@ -6,7 +6,8 @@
       Sant Joan Boreal 2018
     </div>
     <div>
-      <span onclick="window.location='login.php'">🔥</span>🔥
+      <span onclick="window.location='login.php'">🔥</span>
+      <span onclick="window.location='mails.php'">🔥</span>
     </div>
   </div>
   <!--dreta-->
