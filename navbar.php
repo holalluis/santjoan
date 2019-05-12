@@ -25,7 +25,6 @@
     }
   ?>
 </h2><hr>
-
 <style>
   #navbar {
     display:flex;
