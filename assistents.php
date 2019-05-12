@@ -12,17 +12,17 @@
     ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
+<!-- activar quan quedin 3 dies
 <div>
-  <!--
-    <p>
+  <p>
     <b style="border-radius:4px;background:red;padding:5px;color:white">INSCRIPCIONS TANCADES</b>
-    </p>
-  -->
+  </p>
   <p>
     Si encara no has pagat: <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>
     (indica noms i cognoms al concepte)
   </p>
 </div><hr>
+-->
 
 <h3 style=letter-spacing:1px>
   Llista boreal &mdash;
