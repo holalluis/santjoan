@@ -7,15 +7,17 @@
 
   //query all assistents per ordre d'apuntats
   //millorar aquesta part
-  $sql="SELECT * FROM assistents 
+  $sql="SELECT * FROM assistents
     WHERE $pagats $impagats $en_proces 1
     ORDER BY $order_by";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
 ?>
 <div>
-  <p>
+  <!--
+    <p>
     <b style="border-radius:4px;background:red;padding:5px;color:white">INSCRIPCIONS TANCADES</b>
-  </p>
+    </p>
+  -->
   <p>
     Si encara no has pagat: <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>
     (indica noms i cognoms al concepte)
@@ -25,7 +27,7 @@
 <h3 style=letter-spacing:1px>
   Llista boreal &mdash;
   Persones:
-  <?php 
+  <?php
     //nombre total de persones (tenint en compte els filtres)
     $persones = mysqli_num_rows($res);
     echo $persones;

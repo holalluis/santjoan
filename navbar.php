@@ -3,7 +3,7 @@
   <div class=flex>
     <div>🔥🔥</div>
     <div onclick=window.location='index.php'>
-      Sant Joan Boreal 2018
+      Sant Joan Boreal 2019
     </div>
     <div>
       <span onclick="window.location='login.php'">🔥</span>
