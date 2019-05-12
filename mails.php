@@ -6,6 +6,8 @@
 <?php
   if(!$admin)die("No ets admin");
 
+  $n = 0;
+
   //consulta tots els mails
   $sql="SELECT * FROM assistents_2018 ORDER BY mail";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
@@ -20,6 +22,9 @@
       echo "<div>
         $mail,
       </div>";
+      $n++;
     }
   }
+
+  echo "<hr>Total: $n mails";
 ?>
