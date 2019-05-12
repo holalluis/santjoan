@@ -3,7 +3,6 @@
 
   if(isset($_COOKIE['admin']) && $_COOKIE['admin']=='bumbumtamtam'){
     $admin=true;
-
     ?>
       <script>
         //funcions admin
