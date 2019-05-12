@@ -1,7 +1,10 @@
 <h2 id=navbar>
   <!--esquerra-->
   <div class=flex>
-    <div>🔥🔥</div>
+    <div>
+      <span>🔥</span>
+      <span>🔥</span>
+    </div>
     <div onclick=window.location='index.php'>
       Sant Joan Boreal 2019
     </div>
