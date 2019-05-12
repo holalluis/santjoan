@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="css.css">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<title>Sant Joan Boreal 2018</title>
+<title>Sant Joan Boreal 2019</title>
 
 <?php include'admin.php'?>
 
