@@ -6,12 +6,12 @@
 <?php include'admin.php'?>
 
 <?php
-/**Connexió a la base de dades**/
+/**Connexió a la base de dades
 if(in_array($_SERVER['SERVER_NAME'],array('localhost'),true)){
   $mysql=mysqli_connect("127.0.0.1","root","","santjoan")         or die(mysqli_error($mysql));
 }else{
   $mysql=mysqli_connect("127.0.0.1","root","Bol729sh","santjoan") or die(mysqli_error($mysql));
 }
-
+**/
 ?>
 

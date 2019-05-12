@@ -65,7 +65,7 @@
 
   //resultat query
   ?>
-    <div style=padding:1em;background:#af0>Nou assistent apuntat correctament! <a href="index.php">Pàgina principal</a></div>
+  <div style=padding:1em;background:#af0>Nou assistent apuntat correctament! <a href="index.php">Pàgina principal</a></div>
   <?php
 ?>
 </p>

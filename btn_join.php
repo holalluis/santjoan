@@ -1,14 +1,13 @@
 <div class=flex>
   <button
     id=btn_join
-    disabled
     onclick="window.location='join.php'">
     Apunta'm!
   </button>
 
   <div id=data_limit>
     &#9201;
-    Data límit per <b>PAGAR</b>: dimarts 19 de juny! Espavila que vas tard!
+    Data límit per <b>PAGAR</b>: dimarts 19 de juny!
     <style>
       /*animacio*/
       @keyframes blink { from { opacity:0.2; } to { opacity:1; } }
