@@ -6,11 +6,14 @@
 <?php
   if(!$admin)die("No ets admin");
 
-  $n = 0;
+  $taula="assistents_2018";
+
+  echo "Taula: $taula<hr>";
 
   //consulta tots els mails
-  $sql="SELECT * FROM assistents_2018 ORDER BY mail";
+  $sql="SELECT * FROM $taula ORDER BY mail";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
+  $n=0; //quantitat de mails
   while($row=mysqli_fetch_assoc($res)){
     //estructura assistent
     $id   = $row['id'];
