@@ -7,7 +7,7 @@
   if(!$admin)die("No ets admin");
 
   //consulta tots els mails
-  $sql="SELECT * FROM assistents ORDER BY mail";
+  $sql="SELECT * FROM assistents_2018 ORDER BY mail";
   $res=$mysql->query($sql) or die(mysqli_error($mysql));
   while($row=mysqli_fetch_assoc($res)){
     //estructura assistent
