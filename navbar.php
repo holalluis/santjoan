@@ -4,10 +4,10 @@
     <div>
       <span>🔥</span>
       <span>🔥</span>
-    </div>
+    </div>&nbsp;
     <div onclick=window.location='index.php'>
       Sant Joan Boreal 2019
-    </div>
+    </div>&nbsp;
     <div>
       <span onclick="window.location='login.php'">🔥</span>
       <span onclick="window.location='mails.php'">🔥</span>
