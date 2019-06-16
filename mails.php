@@ -5,7 +5,7 @@
 <h3>Mails</h3><hr>
 <?php
   if(!$admin)die("No ets admin");
-  $taula="assistents_2018";
+  $taula="assistents";
   echo "Taula: $taula<hr>";
   //consulta tots els mails
   $sql="SELECT * FROM $taula ORDER BY mail";
