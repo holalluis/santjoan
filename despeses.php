@@ -36,7 +36,6 @@
     {q:  10, concepte:"domini web"},
   ];
 
-
   let table_despeses = document.querySelector('#despeses');
   Despeses.forEach(d=>{
     let nr = table_despeses.insertRow(-1);
