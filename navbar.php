@@ -2,7 +2,7 @@
   <!--esquerra-->
   <div class=flex>
     <div>
-      <span>🔥</span>
+      <span onclick="window.location='despeses.php'">🔥</span>
       <span>🔥</span>
     </div>&nbsp;
     <div onclick=window.location='index.php'>
