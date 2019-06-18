@@ -39,7 +39,7 @@
   let table_despeses = document.querySelector('#despeses');
   Despeses.forEach(d=>{
     let nr = table_despeses.insertRow(-1);
-    nr.insertCell(-1).innerHTML=d.q;
+    nr.insertCell(-1).outerHTML=`<td align=right>${d.q}</td>`;
     nr.insertCell(-1).innerHTML=d.concepte;
   });
   //total
