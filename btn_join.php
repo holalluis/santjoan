@@ -7,7 +7,7 @@
 
   <div id=data_limit>
     &#9201;
-    Data límit per <b>PAGAR</b>: AVUI! ESPAVILA! :)
+    Data límit per <b>PAGAR</b>: <b style=font-size:22px>AVUI!</b>
     <style>
       /*animacio*/
       @keyframes blink { from { opacity:0.2; } to { opacity:1; } }
