@@ -33,7 +33,7 @@
     {q:  40, concepte:"viatge trio rumba"},
     {q:  40, concepte:"viatge grup pau dub"},
     {q:  30, concepte:"comprar caixes porex"},
-    {q:  10, concepte:"domini web"},
+    {q:  23, concepte:"domini web"},
   ];
 
   let table_despeses = document.querySelector('#despeses');
