@@ -51,17 +51,17 @@
 
   let nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=total;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL pressupost";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses previstes";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=gastat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL pagat";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses pagades";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=no_pagat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL no pagat (= pressupost - pagat)";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses no pagades (= previstes - pagades)";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=banc;
-  nr.insertCell(-1).outerHTML="<td colspan=2>Diners al banc (diners disponibles)";
+  nr.insertCell(-1).outerHTML="<td colspan=2>Diners al banc";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=benefici;
-  nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants";
+  nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants (banc - no-pagades)";
 </script>
