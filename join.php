@@ -17,9 +17,15 @@
 <!--formulari-->
 <form method=post>
   <table border=1>
-    <tr><th>Nom  <td><input name=name placeholder="Nom i cognoms" required max=50>
-    <tr><th>Mail <td><input name=mail placeholder="Mail" required max=50>
+    <tr><th>Nom <td><input name=name placeholder="Nom i cognoms" required max=50>
+    <tr><th>Mail<td><input name=mail placeholder="Mail" required max=50>
     <tr><td colspan=2><div class="g-recaptcha" data-sitekey="6LcZE14UAAAAALFxofexh23_ZeKlierv9CMM0IaD"></div>
+    <tr><th> Opcions<td>
+      <ul style=padding:0;list-style-type:none>
+        <li><input type=checkbox name=comis> Formo part d'una comissió d'organització
+        <li><input type=checkbox name=ajuda> Vull ajudar a muntar
+        <li><input type=checkbox name=desmu> Vull ajudar a desmuntar
+      </ul>
     <tr><th><td><button>Apunta'm!</button>
   </table>
 </form><hr>
@@ -32,6 +38,10 @@
   //inputs
   $name=$mysql->escape_string($_POST['name']);
   $mail=$mysql->escape_string($_POST['mail']);
+  $comis=isset($_POST['comis']);
+  $ajuda=isset($_POST['ajuda']);
+  $desmu=isset($_POST['desmu']);
+
   $response = $_POST["g-recaptcha-response"];
 
   //verify captcha
@@ -60,7 +70,7 @@
   }
 
   //insert query
-  $sql="INSERT INTO assistents (nom,mail) VALUES ('$name','$mail')";
+  $sql="INSERT INTO assistents (nom,mail,comis,ajuda,desmuntar) VALUES ('$name','$mail',$comis,$ajuda,$desmu)";
   $mysql->query($sql) or die(mysqli_error($mysql));
 
   //resultat query
