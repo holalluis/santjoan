@@ -48,10 +48,11 @@
   let no_pagat = total - gastat;
   let banc     = 2150;
   let benefici = banc - no_pagat;
+  let ingresssat = banc + gastat;
 
   let nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=total;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses previstes";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses previstes (diners totals a gastar)";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=gastat;
   nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses pagades";
@@ -63,5 +64,8 @@
   nr.insertCell(-1).outerHTML="<td colspan=2>Diners al banc";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=benefici;
-  nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants (banc - no-pagades)";
+  nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants (banc - no-pagats)";
+  nr = table_despeses.insertRow(-1); nr.classList.add('total');
+  nr.insertCell(-1).innerHTML=benefici;
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL ingresssos (banc + pagats)";
 </script>
