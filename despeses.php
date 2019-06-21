@@ -62,6 +62,6 @@
   nr.style.background='#ccc';
   nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=disponible;
-  nr.insertCell(-1).innerHTML="TOTAL disponible";
+  nr.insertCell(-1).innerHTML="TOTAL 'gastable' (pressupost-gastat)";
 </script>
 
