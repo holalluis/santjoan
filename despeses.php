@@ -51,14 +51,14 @@
   nr.insertCell(-1).innerHTML="TOTAL pressupost";
 
   let gastat = Object.values(Despeses).map(d=>(d.q&&d.pagat)).reduce((p,c)=>p+c);
-  let nr = table_despeses.insertRow(-1);
+  nr = table_despeses.insertRow(-1);
   nr.style.background='#ccc';
   nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=gastat;
   nr.insertCell(-1).innerHTML="TOTAL gastat";
 
   let disponible  = total - gastat;
-  let nr = table_despeses.insertRow(-1);
+  nr = table_despeses.insertRow(-1);
   nr.style.background='#ccc';
   nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=disponible;
