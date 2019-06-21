@@ -50,7 +50,7 @@
   nr.insertCell(-1).innerHTML=total;
   nr.insertCell(-1).innerHTML="TOTAL pressupost";
 
-  let gastat = Object.values(Despeses).map(d=>(d.q&&d.pagat)).reduce((p,c)=>p+c);
+  let gastat = Object.values(Despeses).filter(d=>d.pagat).map(d=>(d.q)).reduce((p,c)=>p+c);
   nr = table_despeses.insertRow(-1);
   nr.style.background='#ccc';
   nr.style.fontWeight='bold';
