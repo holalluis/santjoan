@@ -1,12 +1,10 @@
 <!doctype html><html><head>
 <?php include'imports.php'?>
-</head><body>
-<?php include'navbar.php'?>
+  <style>
+    .total{background:'#ccc'; font-weight:'bold';}
+  </style>
+</head><body><?php include'navbar.php'?>
 <h3>Despeses previstes (eur)</h3><hr>
-<?php
-  //if(!$admin)die("No ets admin");
-?>
-
 <table id=despeses border=1></table>
 
 <script>
@@ -64,5 +62,3 @@
   nr.insertCell(-1).innerHTML=benefici;
   nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants";
 </script>
-
-nr.style.background='#ccc'; nr.style.fontWeight='bold';
