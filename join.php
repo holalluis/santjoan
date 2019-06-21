@@ -38,9 +38,9 @@
   //inputs
   $name=$mysql->escape_string($_POST['name']);
   $mail=$mysql->escape_string($_POST['mail']);
-  $comis=isset($_POST['comis']);
-  $ajuda=isset($_POST['ajuda']);
-  $desmu=isset($_POST['desmu']);
+  $comis=isset($_POST['comis'])?1:0;
+  $ajuda=isset($_POST['ajuda'])?1:0;
+  $desmu=isset($_POST['desmu'])?1:0;
 
   $response = $_POST["g-recaptcha-response"];
 
