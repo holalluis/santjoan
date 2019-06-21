@@ -44,9 +44,9 @@
 
   //totals
   let Totals = {
-    total     : {q:    0, descr:"TOTAL despeses previstes" },
-    pagat     : {q:    0, descr:"Despeses pagaades actualment" },
-    no_pagat  : {q:    0, descr:"Despeses encara no pagades"},
+    total     : {q:    0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
+    pagat     : {q:    0, descr:"Despeses pagades " },
+    no_pagat  : {q:    0, descr:"Despeses no pagades"},
     banc      : {q: 1900, descr:"Diners al banc actualment" },
     benefici  : {q:    0, descr:"Previsió diners sobrants (banc - no-pagat)"},
     ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
