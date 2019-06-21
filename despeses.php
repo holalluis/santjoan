@@ -45,26 +45,20 @@
   //total
   let total = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
   let nr = table_despeses.insertRow(-1);
-  nr.colSpan=2;
-  nr.style.background='#ccc';
-  nr.style.fontWeight='bold';
+  nr.style.background='#ccc'; nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=total;
-  nr.insertCell(-1).innerHTML="TOTAL pressupost";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL pressupost";
 
   let gastat = Object.values(Despeses).filter(d=>d.pagat).map(d=>(d.q)).reduce((p,c)=>p+c);
   nr = table_despeses.insertRow(-1);
-  nr.colSpan=2;
-  nr.style.background='#ccc';
-  nr.style.fontWeight='bold';
+  nr.style.background='#ccc'; nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=gastat;
-  nr.insertCell(-1).innerHTML="TOTAL gastat";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL pagat";
 
   let disponible  = total - gastat;
   nr = table_despeses.insertRow(-1);
-  nr.colSpan=2;
-  nr.style.background='#ccc';
-  nr.style.fontWeight='bold';
+  nr.style.background='#ccc'; nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=disponible;
-  nr.insertCell(-1).innerHTML="TOTAL 'gastable' (pressupost-gastat)";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL 'pagable' (pressupost-pagat)";
 </script>
 
