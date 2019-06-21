@@ -10,7 +10,6 @@ body{
 .flex {
   display:flex;
   flex-wrap:wrap;
-  align-items:top;
 }
 
 table {
