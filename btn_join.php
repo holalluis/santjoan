@@ -59,8 +59,8 @@
       <b style="border-radius:4px;background:red;padding:5px;color:white">INSCRIPCIONS TANCADES</b>
     </p>
     <p>
-      Si encara no has pagat: <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>
-      (indica <b>nom i cognoms</b> al concepte)
+      Si encara no has pagat: ingressa <b>25€</b> a <b>ES87 2100 2904 0302 0213 1256</b>
+      (imprescindible indicar <b>nom i cognoms</b> al concepte)
     </p>
   </div><hr>
 <!---->
