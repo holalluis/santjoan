@@ -5,11 +5,10 @@
 <?php //include'btn_join.php'?>
 <?php include'assistents.php'?>
 <?php include'comissions.php'?>
-
 <div style="max-width:50em;text-align:justify;text-justify:inter-word">
   <p>
-    Recordeu que aquesta festa la muntem perquè ens ve de gust,
-    que ho fem per celebrar el foc, el solstici i la vida.
+    Aquesta festa la muntem perquè ens ve de gust, per celebrar el foc, el
+    solstici i la vida.
   </p>
   <p>
     <b>Sentiu-vos partíceps i amfitrions de la festa, que és vostra</b>.
@@ -32,5 +31,4 @@
   <!--
   -->
   <img src=img/cartell2019.png style="display:block;margin:auto;margin-bottom:10px;max-width:100%;box-shadow: 0 0 10px #000000">
-
 </div>

@@ -7,9 +7,8 @@
     }
   </style>
 </head><body><?php include'navbar.php'?>
-<h3>Despeses previstes (eur)</h3><hr>
+<h3>Despeses previstes 2019 (eur)</h3><hr>
 <table id=despeses border=1></table>
-
 <script>
   let Despeses = [
     {q:2000, pagat:true, concepte:"compra gran begudes + menjar + cava + coca"},
@@ -34,14 +33,6 @@
     {q:  23, pagat:false, concepte:"domini web"},
   ];
 
-  let table_despeses = document.querySelector('#despeses');
-  Despeses.forEach(d=>{
-    let nr = table_despeses.insertRow(-1);
-    nr.insertCell(-1).outerHTML=`<td align=right>${d.q}</td>`;
-    nr.insertCell(-1).innerHTML=d.concepte;
-    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"";
-  });
-
   //totals
   let Totals = {
     total     : {q:    0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
@@ -51,14 +42,22 @@
     benefici  : {q:    0, descr:"Previsió diners sobrants (banc - no-pagat)"},
     ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
   };
-
   Totals.total.q     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
   Totals.pagat.q     = Object.values(Despeses).filter(d=>d.pagat==true ).map(d=>(d.q)).reduce((p,c)=>p+c);
   Totals.no_pagat.q  = Object.values(Despeses).filter(d=>d.pagat==false).map(d=>(d.q)).reduce((p,c)=>p+c);
   Totals.benefici.q  = Totals.banc.q - Totals.no_pagat.q;
   Totals.ingressat.q = Totals.banc.q + Totals.pagat.q;
 
-  //dibuixa taula
+  //frontend - dibuixa despeses
+  let table_despeses = document.querySelector('#despeses');
+  Despeses.forEach(d=>{
+    let nr = table_despeses.insertRow(-1);
+    nr.insertCell(-1).outerHTML=`<td align=right>${d.q}</td>`;
+    nr.insertCell(-1).innerHTML=d.concepte;
+    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"";
+  });
+
+  //frontend - dibuixa totals
   Object.entries(Totals).forEach(([key,obj])=>{
     let nr = table_despeses.insertRow(-1);
     nr.classList.add('total');
