@@ -61,7 +61,6 @@
   Object.entries(Totals).forEach(([key,obj])=>{
     let nr = table_despeses.insertRow(-1);
     nr.classList.add('total');
-    nr.insertCell(-1).innerHTML=obj.q;
     nr.insertCell(-1).outerHTML=`<td class=number>${obj.q}`;
     nr.insertCell(-1).outerHTML="<td colspan=2>"+obj.descr;
   });
