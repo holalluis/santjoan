@@ -59,6 +59,6 @@
   nr = table_despeses.insertRow(-1);
   nr.style.background='#ccc'; nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=disponible;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL 'pagable' (pressupost-pagat)";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL no pagat (= pressupost - pagat)";
 </script>
 
