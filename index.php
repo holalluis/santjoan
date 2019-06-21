@@ -5,7 +5,7 @@
 <?php include'btn_join.php'?>
 
 <main class=flex>
-  <div>
+  <div style=margin-right:10px>
     <?php include'assistents.php'?>
   </div>
   <div style="max-width:50em;text-align:justify;text-justify:inter-word">
