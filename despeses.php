@@ -5,6 +5,9 @@
       background:#ccc;
       font-weight:bold;
     }
+    .number{
+      text-align:right;
+    }
   </style>
 </head><body><?php include'navbar.php'?>
 <h3>Despeses previstes 2019 (eur)</h3><hr>
@@ -54,7 +57,7 @@
     let nr = table_despeses.insertRow(-1);
     nr.insertCell(-1).outerHTML=`<td class=number>${d.q}`;
     nr.insertCell(-1).innerHTML=d.concepte;
-    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"<b>pendent</b>";
+    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"<b>no pagat</b>";
   });
 
   //frontend - dibuixa totals
