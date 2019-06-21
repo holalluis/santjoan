@@ -1,7 +1,10 @@
 <!doctype html><html><head>
 <?php include'imports.php'?>
   <style>
-    .total{background:'#ccc'; font-weight:'bold';}
+    tr.total{
+      background:#ccc;
+      font-weight:bold;
+    }
   </style>
 </head><body><?php include'navbar.php'?>
 <h3>Despeses previstes (eur)</h3><hr>
