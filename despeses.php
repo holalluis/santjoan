@@ -43,29 +43,26 @@
   });
 
   //totals
-  let banc      = 2150;
-  let total     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
-  let gastat    = Object.values(Despeses).filter(d=>d.pagat).map(d=>(d.q)).reduce((p,c)=>p+c);
-  let no_pagat  = total - gastat;
-  let benefici  = banc - no_pagat;
-  let ingressat = banc + gastat;
+  let Totals = {
+    total     : {q:    0, descr:"TOTAL despeses previstes" },
+    pagat     : {q:    0, descr:"Despeses pagaades actualment" },
+    no_pagat  : {q:    0, descr:"Despeses encara no pagades"},
+    banc      : {q: 2150, descr:"Diners al banc actualment" },
+    benefici  : {q:    0, descr:"Previsió diners sobrants (banc - no-pagat)"},
+    ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
+  };
+
+  Totals.total.q     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
+  Totals.pagat.q     = Object.values(Despeses).filter(d=>d.pagat==true ).map(d=>(d.q)).reduce((p,c)=>p+c);
+  Totals.no_pagat.q  = Object.values(Despeses).filter(d=>d.pagat==false).map(d=>(d.q)).reduce((p,c)=>p+c);
+  Totals.benefici.q  = Totals.banc.q - Totals.no_pagat.q;
+  Totals.ingressat.q = Totals.banc.q + Totals.pagat.q;
 
   //dibuixa taula
-  let nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=total;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses previstes (diners totals a gastar)";
-  nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=gastat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses pagades actualment";
-  nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=no_pagat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses no pagades (= previstes - pagades)";
-  nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=banc;
-  nr.insertCell(-1).outerHTML="<td colspan=2>Diners al banc";
-  nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=benefici;
-  nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants (banc - no-pagats)";
-  nr = table_despeses.insertRow(-1); nr.classList.add('total');
-  nr.insertCell(-1).innerHTML=ingressat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL ingresssos (banc + pagats)"; </script>
+  Object.entries(Totals).forEach(([key,obj])=>{
+    let nr = table_despeses.insertRow(-1);
+    nr.classList.add('total');
+    nr.insertCell(-1).innerHTML=obj.q;
+    nr.insertCell(-1).outerHTML="<td colspan=2>"+obj.descr;
+  });
+</script>
