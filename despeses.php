@@ -13,11 +13,11 @@
 <script>
   let Despeses = [
     {q:2000, pagat:true, concepte:"compra gran begudes + menjar + cava + coca"},
+    {q: 250, pagat:true, concepte:"comissió decoració"},
     {q: 100, pagat:true, concepte:"gestió jaume"},
     {q:  50, pagat:true, concepte:"benzina motor burra"},
     {q: 375, pagat:false, concepte:"lloguer equip de so capsa trons"},
     {q: 300, pagat:false, concepte:"música: 3 trio rumba"},
-    {q: 250, pagat:false, concepte:"comissió decoració"},
     {q: 150, pagat:false, concepte:"música: 3 el proyecto"},
     {q: 100, pagat:false, concepte:"música: 2 neus+guitarra"},
     {q: 100, pagat:false, concepte:"música: 1 dj fast fingers"},
@@ -47,7 +47,7 @@
     total     : {q:    0, descr:"TOTAL despeses previstes" },
     pagat     : {q:    0, descr:"Despeses pagaades actualment" },
     no_pagat  : {q:    0, descr:"Despeses encara no pagades"},
-    banc      : {q: 2150, descr:"Diners al banc actualment" },
+    banc      : {q: 1900, descr:"Diners al banc actualment" },
     benefici  : {q:    0, descr:"Previsió diners sobrants (banc - no-pagat)"},
     ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
   };
