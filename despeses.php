@@ -2,7 +2,7 @@
 <?php include'imports.php'?>
 </head><body>
 <?php include'navbar.php'?>
-<h3>Despeses previstes</h3><hr>
+<h3>Despeses previstes (eur)</h3><hr>
 <?php
   //if(!$admin)die("No ets admin");
 ?>
@@ -48,6 +48,20 @@
   nr.style.background='#ccc';
   nr.style.fontWeight='bold';
   nr.insertCell(-1).innerHTML=total;
-  nr.insertCell(-1).innerHTML="TOTAL";
+  nr.insertCell(-1).innerHTML="TOTAL pressupost";
+
+  let gastat = Object.values(Despeses).map(d=>(d.q&&d.pagat)).reduce((p,c)=>p+c);
+  let nr = table_despeses.insertRow(-1);
+  nr.style.background='#ccc';
+  nr.style.fontWeight='bold';
+  nr.insertCell(-1).innerHTML=gastat;
+  nr.insertCell(-1).innerHTML="TOTAL gastat";
+
+  let disponible  = total - gastat;
+  let nr = table_despeses.insertRow(-1);
+  nr.style.background='#ccc';
+  nr.style.fontWeight='bold';
+  nr.insertCell(-1).innerHTML=disponible;
+  nr.insertCell(-1).innerHTML="TOTAL disponible";
 </script>
 
