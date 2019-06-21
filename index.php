@@ -4,7 +4,6 @@
 <?php include'navbar.php'?>
 <?php include'btn_join.php'?>
 
-
 <main class=flex>
   <div>
     <?php include'assistents.php'?>
