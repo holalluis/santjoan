@@ -43,19 +43,20 @@
   });
 
   //totals
-  let total    = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
-  let gastat   = Object.values(Despeses).filter(d=>d.pagat).map(d=>(d.q)).reduce((p,c)=>p+c);
-  let no_pagat = total - gastat;
-  let banc     = 2150;
-  let benefici = banc - no_pagat;
+  let banc      = 2150;
+  let total     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
+  let gastat    = Object.values(Despeses).filter(d=>d.pagat).map(d=>(d.q)).reduce((p,c)=>p+c);
+  let no_pagat  = total - gastat;
+  let benefici  = banc - no_pagat;
   let ingressat = banc + gastat;
 
+  //dibuixa taula
   let nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=total;
   nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses previstes (diners totals a gastar)";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=gastat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses pagades";
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses pagades actualment";
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=no_pagat;
   nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL despeses no pagades (= previstes - pagades)";
@@ -65,8 +66,6 @@
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=benefici;
   nr.insertCell(-1).outerHTML="<td colspan=2>Previsió diners sobrants (banc - no-pagats)";
-
   nr = table_despeses.insertRow(-1); nr.classList.add('total');
   nr.insertCell(-1).innerHTML=ingressat;
-  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL ingresssos (banc + pagats)";
-</script>
+  nr.insertCell(-1).outerHTML="<td colspan=2>TOTAL ingresssos (banc + pagats)"; </script>
