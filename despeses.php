@@ -13,7 +13,7 @@
   let Despeses = [
     {q:2000, pagat:true, concepte:"compra gran begudes + menjar + cava + coca"},
     {q: 250, pagat:true, concepte:"comissió decoració"},
-    {q: 100, pagat:true, concepte:"gestió jaume"},
+    {q: 100, pagat:true, concepte:"gestió festa"},
     {q:  50, pagat:true, concepte:"benzina motor burra"},
     {q: 375, pagat:false, concepte:"lloguer equip de so capsa trons"},
     {q: 300, pagat:false, concepte:"música: 3 trio rumba"},
@@ -52,9 +52,9 @@
   let table_despeses = document.querySelector('#despeses');
   Despeses.forEach(d=>{
     let nr = table_despeses.insertRow(-1);
-    nr.insertCell(-1).outerHTML=`<td align=right>${d.q}</td>`;
+    nr.insertCell(-1).outerHTML=`<td class=number>${d.q}`;
     nr.insertCell(-1).innerHTML=d.concepte;
-    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"";
+    nr.insertCell(-1).innerHTML=d.pagat?"pagat":"<b>pendent</b>";
   });
 
   //frontend - dibuixa totals
@@ -62,6 +62,7 @@
     let nr = table_despeses.insertRow(-1);
     nr.classList.add('total');
     nr.insertCell(-1).innerHTML=obj.q;
+    nr.insertCell(-1).outerHTML=`<td class=number>${obj.q}`;
     nr.insertCell(-1).outerHTML="<td colspan=2>"+obj.descr;
   });
 </script>
