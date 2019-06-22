@@ -3,13 +3,13 @@
 </head><body>
 <?php include'navbar.php'?>
 <?php include'btn_join.php'?>
-
 <main class=flex>
   <div style=margin-right:10px>
+    <!--taula assistents-->
     <?php include'assistents.php'?>
   </div>
+  <!--cartell + text-->
   <div style="max-width:50em;text-align:justify;text-justify:inter-word">
-    <!--cartell-->
     <div>
       <img src=img/cartell2019.png style="margin:10px 0;max-width:100%;box-shadow: 0 0 5px #aaa">
     </div>
@@ -25,8 +25,7 @@
       de brossa. I quan la ressaca ens comenci a despertar haurem de fer una
       altra brigada per acabar de deixar la platja neta perquè hi puguem tornar
       un any més!
-    </p>
-    <p>
+    </p><p>
       Agraïm infinitament la cooperació que fa que tot això, cada any, valgui la pena.
     </p>
     <p style=text-align:center>
