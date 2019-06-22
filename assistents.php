@@ -139,7 +139,7 @@
       if($admin)echo "<th>"; //columna admin final
     ?>
   </tbody>
-</table><hr>
+</table>
 
 <style>
   #assistents th {
