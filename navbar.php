@@ -2,7 +2,7 @@
   <!--esquerra-->
   <div class=flex>
     <div onclick=window.location='index.php'>
-      SANT JOAN BOREAL 2019
+      Sant Joan Boreal 2019
     </div>&nbsp;
     <div>
       <span onclick="window.location='despeses.php'">🔥</span>
