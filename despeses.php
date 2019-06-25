@@ -44,7 +44,7 @@
     total     : {q:    0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
     pagat     : {q:    0, descr:"Despeses pagades " },
     no_pagat  : {q:    0, descr:"Despeses no pagades"},
-    banc      : {q: 2125, descr:"Diners al banc actualment" },
+    banc      : {q: 1365, descr:"Diners al banc actualment" },
     ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
     benefici  : {q:    0, descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
   };
