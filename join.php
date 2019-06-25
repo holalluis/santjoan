@@ -73,6 +73,9 @@
   $sql="INSERT INTO assistents (nom,mail,comis,ajuda,desmuntar) VALUES ('$name','$mail',$comis,$ajuda,$desmu)";
   $mysql->query($sql) or die(mysqli_error($mysql));
 
+  //mail confirmació
+  mail("holalluis@gmail.com","Registre Sant Joan Boreal","Hola $name, amb el mail $mail: t'has apuntat correctament a st joan boreal ");
+
   //resultat query
   ?>
   <div style=padding:1em;background:#af0>Nou assistent apuntat correctament! <a href="index.php">Pàgina principal</a></div>
