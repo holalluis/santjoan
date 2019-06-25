@@ -17,6 +17,7 @@
     {q:2000, pagat:true, destí:"ES51 2100 0027 2002 0135 0511", concepte:"compra gran begudes + menjar + cava + coca"}, //max prat
     {q: 340, pagat:true, destí:"ES45 2100 0412 7301 0036 7389", concepte:"música: 3 trio rumba"},                       //goyo
     {q: 250, pagat:true, destí:"ES26 3025 0014 0714 0008 3269", concepte:"comissió decoració"},                         //georgina nicolás
+    {q: 208, pagat:true, destí:"ES36 1491 0001 2921 3274 5825", concepte:"transport coses + alcohol (lio)"},           //-- lio dimant
     {q: 200, pagat:true, destí:"ES85 0182 8730 0102 0091 3346", concepte:"música: 3 el proyecto"},                      //pau (el proyecto)
     {q: 100, pagat:true, destí:"ES24 2100 0665 4301 0090 1339", concepte:"gestió festa"},                               //jaume madaula
     {q:  60, pagat:true, destí:"ES86 3025 0002 4714 3341 4006", concepte:"cubells"},                                    //laia gausà
@@ -36,7 +37,6 @@
     {q: 100, pagat:false, destí:"ES52 2100 0658 0101 0044 3754", concepte:"música: dj fast fingers"},                    //-- jo
     {q:  50, pagat:false, destí:"?",                             concepte:"comissió gots"},                              //-- duna
     {q:  40, pagat:false, destí:"ES52 2100 0658 0101 0044 3754", concepte:"viatge equip de so diana metàl·lic "},        //-- jo
-    {q:  30, pagat:false, destí:"ES36 1491 0001 2921 3274 5825", concepte:"transport coses (lio)"},                      //-- lio dimant
     {q:  25, pagat:false, destí:"?",                             concepte:"devolucions no assistents"},                  //-- miquel felip peig
     {q:  23, pagat:false, destí:"ES52 2100 0658 0101 0044 3754", concepte:"domini web"},                                 //-- jo
   ];
@@ -46,7 +46,7 @@
     total    :{q:    0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
     pagat    :{q:    0, descr:"Despeses pagades " },
     no_pagat :{q:    0, descr:"Despeses no pagades"},
-    banc     :{q: 1495, descr:"Diners al banc actualment" },
+    banc     :{q: 1287, descr:"Diners al banc actualment" },
     ingressat:{q:    0, descr:"Ingressat total real (banc + pagat)"},
     benefici :{q:    0, descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
   };
