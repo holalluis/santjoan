@@ -19,14 +19,20 @@
     {q: 100, pagat:true, concepte:"gestió festa"},
     {q:  60, pagat:true, concepte:"cubells"},
     {q:  50, pagat:true, concepte:"benzina motor burra"},
+
     {q: 375, pagat:false, concepte:"lloguer equip de so capsa trons"},
     {q: 300, pagat:false, concepte:"música: 3 trio rumba"},
     {q: 150, pagat:false, concepte:"música: 3 el proyecto"},
     {q: 100, pagat:false, concepte:"música: 2 neus+guitarra"},
     {q: 100, pagat:false, concepte:"música: 1 dj fast fingers"},
     {q:  80, pagat:false, concepte:"gel"},
-    {q:  50, pagat:false, concepte:"viatge furgo alcohol"},
-    {q:  50, pagat:false, concepte:"viatge equip de so"},
+
+    {q:  50, pagat:false, concepte:"viatge equip de so (diana pagada per lluís)"},
+    {q:  50, pagat:false, concepte:"comissió gots"},
+    {q:  50, pagat:false, concepte:"transport alcohol (manel D)"},
+    {q:  30, pagat:false, concepte:"transport alcohol (edu M)"},
+    {q:  30, pagat:false, concepte:"transport alcohol (max P)"},
+
     {q:  50, pagat:false, concepte:"música: 1 dj sara vidal"},
     {q:  50, pagat:false, concepte:"feina rincón de la mierda + caixes"},
     {q:  40, pagat:false, concepte:"viatge neus+guitarra"},
@@ -41,9 +47,9 @@
     total     : {q:    0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
     pagat     : {q:    0, descr:"Despeses pagades " },
     no_pagat  : {q:    0, descr:"Despeses no pagades"},
-    banc      : {q: 1940, descr:"Diners al banc actualment" },
-    benefici  : {q:    0, descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
+    banc      : {q: 2125, descr:"Diners al banc actualment" },
     ingressat : {q:    0, descr:"Ingressat total real (banc + pagat)"},
+    benefici  : {q:    0, descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
   };
   Totals.total.q     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
   Totals.pagat.q     = Object.values(Despeses).filter(d=>d.pagat==true ).map(d=>(d.q)).reduce((p,c)=>p+c);
