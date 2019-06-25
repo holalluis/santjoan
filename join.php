@@ -74,7 +74,11 @@
   $mysql->query($sql) or die(mysqli_error($mysql));
 
   //mail confirmació
-  mail("holalluis@gmail.com","Registre Sant Joan Boreal","Hola $name, amb el mail $mail: t'has apuntat correctament a st joan boreal ");
+  $mail_sent = mail("holalluis@gmail.com","Registre Sant Joan Boreal","Hola $name, amb el mail $mail: t'has apuntat correctament a st joan boreal ");
+
+  echo "<div>
+    correu enviat: $mail_sent
+  </div>";
 
   //resultat query
   ?>
