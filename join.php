@@ -81,10 +81,13 @@
   //mail confirmació
   $mail_sent=mail("$mail","Registre Sant Joan Boreal","Hola $name,\n\nEl teu registre a St Joan Boreal s'ha processat correctament.");
 
-  /* TODO confirmació correu enviat
-    echo "<div>
-      correu enviat: $mail_sent
-    </div>";
-  */
+  //TODO confirmació correu enviat
+  echo "<div style=padding:1em>";
+  if($mail_sent){
+    echo "mail de confirmació enviat correctament";
+  }else{
+    echo "mail de confirmació no enviat";
+  }
+  echo "</div>";
 ?>
 </p>
