@@ -1,0 +1,4 @@
+- poder pagar des de la web
+- formulari: obligatori apuntar-te a una opció per col·laborar (muntar, desmuntar, etc)
+- SSL (https)
+- sessions php enlloc de cookies
