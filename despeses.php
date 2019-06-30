@@ -14,13 +14,14 @@
 <table id=despeses border=1></table>
 <script>
   let Despeses=[
-    {q:2000, pagat:true,  destí:"ES51 2100 0027 2002 0135 0511", concepte:"compra gran begudes + menjar + cava + coca"}, //max prat
+    {q:1845, pagat:true,  destí:"ES51 2100 0027 2002 0135 0511", concepte:"compra gran begudes + menjar + cava + coca"}, //max prat
     {q: 340, pagat:true,  destí:"ES45 2100 0412 7301 0036 7389", concepte:"música: 3 trio rumba"},                       //goyo
     {q: 310, pagat:true,  destí:"ES24 2100 0665 4301 0090 1339", concepte:"gestió festa"},                               //jaume madaula
     {q: 250, pagat:true,  destí:"ES26 3025 0014 0714 0008 3269", concepte:"comissió decoració"},                         //georgina nicolás
     {q: 208, pagat:true,  destí:"ES36 1491 0001 2921 3274 5825", concepte:"transport coses + alcohol (lio)"},            //lio dimant
     {q: 200, pagat:true,  destí:"ES85 0182 8730 0102 0091 3346", concepte:"música: 3 el proyecto"},                      //pau (el proyecto)
     {q: 140, pagat:true,  destí:"ES52 2100 0658 0101 0044 3754", concepte:"dj fast fingers + transport"},                //lluís bosch
+    {q: 140, pagat:true,  destí:"ES44 2100 0212 1701 0067 7747", concepte:"música+viatge: neus i miquel"},               //neus
     {q:  60, pagat:true,  destí:"ES86 3025 0002 4714 3341 4006", concepte:"cubells"},                                    //laia gausà
     {q:  50, pagat:true,  destí:"ES24 2100 0665 4301 0090 1339", concepte:"benzina motor burra"},                        //jaume madaula
     {q:  50, pagat:true,  destí:"ES13 2100 2904 0902 1832 4019", concepte:"rincón de la mierda"},                        //maria andreu hayles
@@ -36,7 +37,6 @@
     {q:  23, pagat:true,  destí:"ES52 2100 0658 0101 0044 3754", concepte:"web"},                                        //lluís bosch
     {q:  17, pagat:true,  destí:"ES86 3025 0002 4714 3341 4006", concepte:"coca st joan"},                               //laia gausà
     {q: 375, pagat:false, destí:"ES49 0081 0561 1400 0154 7063", concepte:"lloguer equip de so capsa trons"},             //-- capsa de trons
-    {q: 140, pagat:false, destí:"?",                             concepte:"música+viatge: neus i miquel"},                //-- neus
     {q:  50, pagat:false, destí:"?",                             concepte:"comissió gots"},                               //-- duna
     {q:  25, pagat:false, destí:"?",                             concepte:"devolucions no assistents (1)"},               //-- miquel felip peig
   ];
@@ -46,7 +46,7 @@
     total    :{q:   0, descr:"TOTAL despeses previstes (pagades + no pagades)" },
     pagat    :{q:   0, descr:"Despeses pagades " },
     no_pagat :{q:   0, descr:"Despeses no pagades"},
-    banc     :{q: 877, descr:"Diners al banc actualment" },
+    banc     :{q: 892, descr:"Diners al banc actualment" },
     ingressat:{q:   0, descr:"Ingressat total real (banc + pagat)"},
     benefici :{q:   0, descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
   };
