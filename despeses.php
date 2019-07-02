@@ -47,9 +47,9 @@
     ingressat:{q:   0,    descr:"Ingressat total real (banc + pagat)"},
     benefici :{q:   0,    descr:"Previsió diners sobrants i/o imprevistos (banc - no-pagat)"},
   };
-  Totals.total.q     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c);
-  Totals.pagat.q     = Object.values(Despeses).filter(d=>d.pagat==true ).map(d=>(d.q)).reduce((p,c)=>p+c);
-  Totals.no_pagat.q  = Object.values(Despeses).filter(d=>d.pagat==false).map(d=>(d.q)).reduce((p,c)=>p+c);
+  Totals.total.q     = Object.values(Despeses).map(d=>d.q).reduce((p,c)=>p+c,0);
+  Totals.pagat.q     = Object.values(Despeses).filter(d=>d.pagat==true ).map(d=>(d.q)).reduce((p,c)=>p+c,0);
+  Totals.no_pagat.q  = Object.values(Despeses).filter(d=>d.pagat==false).map(d=>(d.q)).reduce((p,c)=>p+c,0);
   Totals.benefici.q  = Totals.banc.q - Totals.no_pagat.q;
   Totals.ingressat.q = Totals.banc.q + Totals.pagat.q;
   //frontend - dibuixa taula al DOM
